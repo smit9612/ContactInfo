@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1037E91A21C96084001C2F6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E91921C96084001C2F6B /* AppDelegate.swift */; };
-		1037E91C21C96084001C2F6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E91B21C96084001C2F6B /* ViewController.swift */; };
+		1037E91C21C96084001C2F6B /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E91B21C96084001C2F6B /* ContactViewController.swift */; };
 		1037E91F21C96084001C2F6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1037E91D21C96084001C2F6B /* Main.storyboard */; };
 		1037E92221C96084001C2F6B /* ContactForm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1037E92021C96084001C2F6B /* ContactForm.xcdatamodeld */; };
 		1037E92421C96085001C2F6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1037E92321C96085001C2F6B /* Assets.xcassets */; };
 		1037E92721C96085001C2F6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1037E92521C96085001C2F6B /* LaunchScreen.storyboard */; };
 		1037E93221C96086001C2F6B /* ContactFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E93121C96086001C2F6B /* ContactFormTests.swift */; };
 		1037E93D21C96086001C2F6B /* ContactFormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E93C21C96086001C2F6B /* ContactFormUITests.swift */; };
+		1037E94C21C9F9B0001C2F6B /* SPInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E94B21C9F9B0001C2F6B /* SPInputView.swift */; };
+		1037E94F21CA0446001C2F6B /* ItemStackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E94E21CA0446001C2F6B /* ItemStackable.swift */; };
+		1037E95321CA048F001C2F6B /* ContactViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E95221CA048F001C2F6B /* ContactViewmodel.swift */; };
+		1037E95521CA1A83001C2F6B /* NibFileLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E95421CA1A83001C2F6B /* NibFileLoadable.swift */; };
+		1037E95721CA1C18001C2F6B /* SPInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1037E95621CA1C18001C2F6B /* SPInputView.xib */; };
+		1037E95A21CA1EAC001C2F6B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E95921CA1EAC001C2F6B /* UIView+Extensions.swift */; };
+		1037E96121CA7D72001C2F6B /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E95F21CA7D72001C2F6B /* TextFieldEffects.swift */; };
+		1037E96221CA7D72001C2F6B /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E96021CA7D72001C2F6B /* AkiraTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +45,7 @@
 /* Begin PBXFileReference section */
 		1037E91621C96084001C2F6B /* ContactForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1037E91921C96084001C2F6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1037E91B21C96084001C2F6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1037E91B21C96084001C2F6B /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		1037E91E21C96084001C2F6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1037E92121C96084001C2F6B /* ContactForm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactForm.xcdatamodel; sourceTree = "<group>"; };
 		1037E92321C96085001C2F6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		1037E93821C96086001C2F6B /* ContactFormUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactFormUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1037E93C21C96086001C2F6B /* ContactFormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormUITests.swift; sourceTree = "<group>"; };
 		1037E93E21C96086001C2F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1037E94B21C9F9B0001C2F6B /* SPInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPInputView.swift; sourceTree = "<group>"; };
+		1037E94E21CA0446001C2F6B /* ItemStackable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStackable.swift; sourceTree = "<group>"; };
+		1037E95221CA048F001C2F6B /* ContactViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewmodel.swift; sourceTree = "<group>"; };
+		1037E95421CA1A83001C2F6B /* NibFileLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibFileLoadable.swift; sourceTree = "<group>"; };
+		1037E95621CA1C18001C2F6B /* SPInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPInputView.xib; sourceTree = "<group>"; };
+		1037E95921CA1EAC001C2F6B /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		1037E95F21CA7D72001C2F6B /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
+		1037E96021CA7D72001C2F6B /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +115,13 @@
 		1037E91821C96084001C2F6B /* ContactForm */ = {
 			isa = PBXGroup;
 			children = (
+				1037E95821CA1E99001C2F6B /* Extensions */,
+				1037E95121CA0479001C2F6B /* ViewModel */,
+				1037E95021CA0465001C2F6B /* Model */,
+				1037E94D21CA0435001C2F6B /* Protocols */,
+				1037E94A21C9F988001C2F6B /* AnimatedTextField */,
 				1037E91921C96084001C2F6B /* AppDelegate.swift */,
-				1037E91B21C96084001C2F6B /* ViewController.swift */,
+				1037E91B21C96084001C2F6B /* ContactViewController.swift */,
 				1037E91D21C96084001C2F6B /* Main.storyboard */,
 				1037E92321C96085001C2F6B /* Assets.xcassets */,
 				1037E92521C96085001C2F6B /* LaunchScreen.storyboard */,
@@ -126,6 +147,49 @@
 				1037E93E21C96086001C2F6B /* Info.plist */,
 			);
 			path = ContactFormUITests;
+			sourceTree = "<group>";
+		};
+		1037E94A21C9F988001C2F6B /* AnimatedTextField */ = {
+			isa = PBXGroup;
+			children = (
+				1037E96021CA7D72001C2F6B /* AkiraTextField.swift */,
+				1037E95F21CA7D72001C2F6B /* TextFieldEffects.swift */,
+				1037E94B21C9F9B0001C2F6B /* SPInputView.swift */,
+				1037E95621CA1C18001C2F6B /* SPInputView.xib */,
+			);
+			path = AnimatedTextField;
+			sourceTree = "<group>";
+		};
+		1037E94D21CA0435001C2F6B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1037E94E21CA0446001C2F6B /* ItemStackable.swift */,
+				1037E95421CA1A83001C2F6B /* NibFileLoadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1037E95021CA0465001C2F6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1037E95121CA0479001C2F6B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1037E95221CA048F001C2F6B /* ContactViewmodel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1037E95821CA1E99001C2F6B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1037E95921CA1EAC001C2F6B /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1037E95721CA1C18001C2F6B /* SPInputView.xib in Resources */,
 				1037E92721C96085001C2F6B /* LaunchScreen.storyboard in Resources */,
 				1037E92421C96085001C2F6B /* Assets.xcassets in Resources */,
 				1037E91F21C96084001C2F6B /* Main.storyboard in Resources */,
@@ -259,9 +324,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1037E91C21C96084001C2F6B /* ViewController.swift in Sources */,
+				1037E94C21C9F9B0001C2F6B /* SPInputView.swift in Sources */,
+				1037E95521CA1A83001C2F6B /* NibFileLoadable.swift in Sources */,
+				1037E95321CA048F001C2F6B /* ContactViewmodel.swift in Sources */,
+				1037E91C21C96084001C2F6B /* ContactViewController.swift in Sources */,
+				1037E96221CA7D72001C2F6B /* AkiraTextField.swift in Sources */,
 				1037E91A21C96084001C2F6B /* AppDelegate.swift in Sources */,
 				1037E92221C96084001C2F6B /* ContactForm.xcdatamodeld in Sources */,
+				1037E95A21CA1EAC001C2F6B /* UIView+Extensions.swift in Sources */,
+				1037E94F21CA0446001C2F6B /* ItemStackable.swift in Sources */,
+				1037E96121CA7D72001C2F6B /* TextFieldEffects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
