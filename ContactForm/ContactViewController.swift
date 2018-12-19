@@ -44,7 +44,7 @@ extension ContactViewController {
         
         let inputView = SPInputView.loadFromNib()
         inputView.textField.placeholder = placeHolder
-        stackView.addArrangedSubview(UIView.createView(withSubview: inputView, edgeInsets: .badge))
+        stackView.addArrangedSubview(UIView.createView(withSubview: inputView, edgeInsets: .standard))
     }
 
 }
@@ -52,5 +52,7 @@ extension ContactViewController {
 // MARK: - UIEdgeInsets
 extension UIEdgeInsets {
     
-    fileprivate static let badge: UIEdgeInsets = UIEdgeInsets(top: 5, left: 16, bottom: -5, right: -16)
+    fileprivate static let top: UIEdgeInsets = UIEdgeInsets(top: 20, left: 16, bottom: -5, right: -16)
+    fileprivate static let bottom: UIEdgeInsets = UIEdgeInsets(top: 5, left: 16, bottom: -20, right: -16)
+    fileprivate static let standard: UIEdgeInsets = UIEdgeInsets(top: 5, left: 16, bottom: -5, right: -16)
 }
