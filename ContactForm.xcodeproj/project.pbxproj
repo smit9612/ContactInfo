@@ -28,6 +28,7 @@
 		1037E97621CB3AE3001C2F6B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E97521CB3AE3001C2F6B /* CoreDataManager.swift */; };
 		1037E98121CB3CD7001C2F6B /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E97F21CB3CD7001C2F6B /* ContactInfo.swift */; };
 		1037E98221CB3CD7001C2F6B /* _ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E98021CB3CD7001C2F6B /* _ContactInfo.swift */; };
+		1037E98521CB48C4001C2F6B /* ManagerInjected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E98421CB48C4001C2F6B /* ManagerInjected.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		1037E97521CB3AE3001C2F6B /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		1037E97F21CB3CD7001C2F6B /* ContactInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
 		1037E98021CB3CD7001C2F6B /* _ContactInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _ContactInfo.swift; sourceTree = "<group>"; };
+		1037E98421CB48C4001C2F6B /* ManagerInjected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerInjected.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		1037E91821C96084001C2F6B /* ContactForm */ = {
 			isa = PBXGroup;
 			children = (
+				1037E98321CB48AE001C2F6B /* DI */,
 				1037E95821CA1E99001C2F6B /* Extensions */,
 				1037E95121CA0479001C2F6B /* ViewModel */,
 				1037E95021CA0465001C2F6B /* Model */,
@@ -205,6 +208,14 @@
 				1037E95921CA1EAC001C2F6B /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1037E98321CB48AE001C2F6B /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				1037E98421CB48C4001C2F6B /* ManagerInjected.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1037E96421CAD777001C2F6B /* UITextField+Extensions.swift in Sources */,
+				1037E98521CB48C4001C2F6B /* ManagerInjected.swift in Sources */,
 				1037E94C21C9F9B0001C2F6B /* SPInputView.swift in Sources */,
 				1037E95521CA1A83001C2F6B /* NibFileLoadable.swift in Sources */,
 				1037E97621CB3AE3001C2F6B /* CoreDataManager.swift in Sources */,

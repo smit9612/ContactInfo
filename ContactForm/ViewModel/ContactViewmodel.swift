@@ -35,8 +35,16 @@ struct ContactViewModel: ItemStackable {
         return items
     }
     
-    func saveContact(data: ContactDataProvider) {
-        
+    
+}
+
+extension ContactViewModel: ManagerInjected {
+    var contactInfos : [ContactDataProvider]? {
+        return coreDataManager.fetchContacts()
+    }
+    
+    func saveContact(contactDataProvider: ContactDataProvider) {
+        coreDataManager.saveContact(contactDataProvider: contactDataProvider)
     }
     
 }

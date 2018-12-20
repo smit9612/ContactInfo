@@ -24,7 +24,7 @@ final class ContactViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     private var contactViewModel: ContactViewModel!
-    private var contactDataProvider: ContactDataProvider?
+    private var contactDataProvider: ContactDataProvider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +32,13 @@ final class ContactViewController: UIViewController {
         scrollView.contentInsetAdjustmentBehavior = .never
         contactViewModel = ContactViewModel()
         contactDataProvider = ContactDataProvider()
+        let contactInfos = contactViewModel.contactInfos
+        
         configureStackView()
     }
     @IBAction func saveClicked(_ sender: Any) {
         //Validate all textFields and save contact info into coredata.
-        
+        contactViewModel.saveContact(contactDataProvider: contactDataProvider)
     }
 }
 
@@ -75,10 +77,7 @@ extension ContactViewController {
             return inputView
         }.first
     }
-    
-    private func resetStackView() {
-        
-    }
+
 }
 
 // MARK: -  UITextFieldDelegate
@@ -103,13 +102,13 @@ extension ContactViewController: UITextFieldDelegate {
         }
         do {
             if textField.placeholder == PlaceholderString.firstName.rawValue {
-                contactDataProvider?.firstName = try inputView.textField.validatedText(validationType: .firstname)
+                contactDataProvider.firstName = try inputView.textField.validatedText(validationType: .firstname)
             }
             if textField.placeholder == PlaceholderString.lastName.rawValue {
-                contactDataProvider?.lastName = try inputView.textField.validatedText(validationType: .lastname)
+                contactDataProvider.lastName = try inputView.textField.validatedText(validationType: .lastname)
             }
             if textField.placeholder == PlaceholderString.dob.rawValue {
-                contactDataProvider?.dob = try inputView.textField.validatedText(validationType: .username)
+                contactDataProvider.dob = try inputView.textField.validatedText(validationType: .username)
             }
             
         } catch(let error) {

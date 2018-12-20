@@ -1,19 +1,25 @@
 //
 //  CoreDataManager.swift
-//  MyAutoFinance
+//  ContactForm
 //
-//  Created by Burri on 2018-10-27.
-//  Copyright © 2018 TD Bank. All rights reserved.
+//  Created by smitesh patel on 2018-12-18.
+//  Copyright © 2018 smitesh patel. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
+protocol CoreDataManagerProtocol {
+    
+    func deleteManagedObjects(_ objects: [NSManagedObject])
+    func deleteAllRecords(from entity: String)
+    func saveContact(contactDataProvider: ContactDataProvider)
+    func fetchContacts() -> [ContactDataProvider]?
+}
+
 /// Core Data stack
 final class CoreDataManager: NSObject {
-    
-    static let shared = CoreDataManager()
-    
+
     private lazy var documentDirectoryURL: URL? = {
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last ?? "")
         return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
@@ -50,8 +56,30 @@ final class CoreDataManager: NSObject {
     }()
 }
 
-// MARK: - Internal Methods
-extension CoreDataManager {
+// MARK: - CoreDataProvider
+extension CoreDataManager: CoreDataManagerProtocol {
+    
+    func fetchContacts() -> [ContactDataProvider]? {
+        var contactDataProviders = [ContactDataProvider]()
+        for data in fetchObjects(for: "ContactInfo") as! [NSManagedObject] {
+            var contactDataProvider = ContactDataProvider()
+            contactDataProvider.firstName = data.value(forKey: "firstName") as? String
+            contactDataProvider.lastName = data.value(forKey: "lastName") as? String
+            contactDataProvider.dob = data.value(forKey: "dob") as? String
+            contactDataProviders.append(contactDataProvider)
+        }
+        return contactDataProviders
+    }
+    
+    
+    func saveContact(contactDataProvider: ContactDataProvider) {
+        let contactInfo = ContactInfo(context: managedObjectContext)
+        contactInfo.firstName = contactDataProvider.firstName
+        contactInfo.lastName = contactDataProvider.lastName
+        contactInfo.dob = contactDataProvider.dob
+        saveContext()
+    }
+    
     
     /// The saveContext saves the managedObjectContext changes
     func saveContext() {
@@ -79,6 +107,11 @@ extension CoreDataManager {
         }
     }
     
+    
+}
+
+// MARK: - Private Methods
+extension CoreDataManager {
     /// Returns the fetched objects of the given entity for the given parameters, sorted by an array of sort descriptors.
     ///
     /// - Parameters:
@@ -88,17 +121,13 @@ extension CoreDataManager {
     ///   - fetchLimit: the number of items to be fetched (optional, default is no limit).
     /// - Returns: A optional array of objects of the current NSManagedObject subclass.
     
-    func fetchObjects(for entity: String, sortedBy sortDescriptors: [NSSortDescriptor]? = nil,
-                        predicate: NSPredicate? = nil,
-                        fetchLimit: Int = 1) -> NSArray? {
+    private func fetchObjects(for entity: String, sortedBy sortDescriptors: [NSSortDescriptor]? = nil,
+                      predicate: NSPredicate? = nil,
+                      fetchLimit: Int = 1) -> NSArray? {
         let request = fetchRequest(for: entity, predicate: predicate, sortDescriptors: sortDescriptors, fetchLimit: fetchLimit)
         guard let managedObjects = try? managedObjectContext.fetch(request) as? [NSManagedObject] else { return nil }
         return managedObjects as? NSArray
     }
-}
-
-// MARK: - Private Methods
-extension CoreDataManager {
     
     private func fetchRequest(for entityName: String, predicate: NSPredicate? = nil,
                               sortDescriptors: [NSSortDescriptor]?,
