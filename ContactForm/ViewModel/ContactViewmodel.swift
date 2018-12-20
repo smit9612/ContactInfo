@@ -7,9 +7,17 @@
 //
 
 import Foundation
+import CoreData
+
+struct ContactDataProvider {
+    
+    var firstName: String?
+    var lastName: String?
+    var dob: String?
+}
 
 struct ContactViewModel: ItemStackable {
-    
+
     // MARK: - ItemStackable
     enum StackableItem {
         case firstName
@@ -26,4 +34,9 @@ struct ContactViewModel: ItemStackable {
 
         return items
     }
+    
+    func saveContact(data: ContactDataProvider) {
+        
+    }
+    
 }

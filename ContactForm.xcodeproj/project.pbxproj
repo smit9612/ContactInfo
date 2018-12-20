@@ -10,7 +10,6 @@
 		1037E91A21C96084001C2F6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E91921C96084001C2F6B /* AppDelegate.swift */; };
 		1037E91C21C96084001C2F6B /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E91B21C96084001C2F6B /* ContactViewController.swift */; };
 		1037E91F21C96084001C2F6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1037E91D21C96084001C2F6B /* Main.storyboard */; };
-		1037E92221C96084001C2F6B /* ContactForm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1037E92021C96084001C2F6B /* ContactForm.xcdatamodeld */; };
 		1037E92421C96085001C2F6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1037E92321C96085001C2F6B /* Assets.xcassets */; };
 		1037E92721C96085001C2F6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1037E92521C96085001C2F6B /* LaunchScreen.storyboard */; };
 		1037E93221C96086001C2F6B /* ContactFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E93121C96086001C2F6B /* ContactFormTests.swift */; };
@@ -23,6 +22,12 @@
 		1037E95A21CA1EAC001C2F6B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E95921CA1EAC001C2F6B /* UIView+Extensions.swift */; };
 		1037E96121CA7D72001C2F6B /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E95F21CA7D72001C2F6B /* TextFieldEffects.swift */; };
 		1037E96221CA7D72001C2F6B /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E96021CA7D72001C2F6B /* AkiraTextField.swift */; };
+		1037E96421CAD777001C2F6B /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E96321CAD777001C2F6B /* UITextField+Extensions.swift */; };
+		1037E96621CAD780001C2F6B /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E96521CAD780001C2F6B /* Validators.swift */; };
+		1037E96921CAFEC9001C2F6B /* ContactForm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1037E96721CAFEC8001C2F6B /* ContactForm.xcdatamodeld */; };
+		1037E97621CB3AE3001C2F6B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E97521CB3AE3001C2F6B /* CoreDataManager.swift */; };
+		1037E98121CB3CD7001C2F6B /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E97F21CB3CD7001C2F6B /* ContactInfo.swift */; };
+		1037E98221CB3CD7001C2F6B /* _ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037E98021CB3CD7001C2F6B /* _ContactInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +52,6 @@
 		1037E91921C96084001C2F6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1037E91B21C96084001C2F6B /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		1037E91E21C96084001C2F6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1037E92121C96084001C2F6B /* ContactForm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactForm.xcdatamodel; sourceTree = "<group>"; };
 		1037E92321C96085001C2F6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1037E92621C96085001C2F6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1037E92821C96085001C2F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +69,12 @@
 		1037E95921CA1EAC001C2F6B /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		1037E95F21CA7D72001C2F6B /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
 		1037E96021CA7D72001C2F6B /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
+		1037E96321CAD777001C2F6B /* UITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		1037E96521CAD780001C2F6B /* Validators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		1037E96821CAFEC8001C2F6B /* ContactForm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactForm.xcdatamodel; sourceTree = "<group>"; };
+		1037E97521CB3AE3001C2F6B /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		1037E97F21CB3CD7001C2F6B /* ContactInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
+		1037E98021CB3CD7001C2F6B /* _ContactInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _ContactInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +132,11 @@
 				1037E94A21C9F988001C2F6B /* AnimatedTextField */,
 				1037E91921C96084001C2F6B /* AppDelegate.swift */,
 				1037E91B21C96084001C2F6B /* ContactViewController.swift */,
+				1037E97521CB3AE3001C2F6B /* CoreDataManager.swift */,
 				1037E91D21C96084001C2F6B /* Main.storyboard */,
 				1037E92321C96085001C2F6B /* Assets.xcassets */,
 				1037E92521C96085001C2F6B /* LaunchScreen.storyboard */,
 				1037E92821C96085001C2F6B /* Info.plist */,
-				1037E92021C96084001C2F6B /* ContactForm.xcdatamodeld */,
 			);
 			path = ContactForm;
 			sourceTree = "<group>";
@@ -152,6 +162,7 @@
 		1037E94A21C9F988001C2F6B /* AnimatedTextField */ = {
 			isa = PBXGroup;
 			children = (
+				1037E96521CAD780001C2F6B /* Validators.swift */,
 				1037E96021CA7D72001C2F6B /* AkiraTextField.swift */,
 				1037E95F21CA7D72001C2F6B /* TextFieldEffects.swift */,
 				1037E94B21C9F9B0001C2F6B /* SPInputView.swift */,
@@ -172,6 +183,9 @@
 		1037E95021CA0465001C2F6B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1037E98021CB3CD7001C2F6B /* _ContactInfo.swift */,
+				1037E97F21CB3CD7001C2F6B /* ContactInfo.swift */,
+				1037E96721CAFEC8001C2F6B /* ContactForm.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +201,7 @@
 		1037E95821CA1E99001C2F6B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1037E96321CAD777001C2F6B /* UITextField+Extensions.swift */,
 				1037E95921CA1EAC001C2F6B /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
@@ -260,6 +275,7 @@
 				TargetAttributes = {
 					1037E91521C96084001C2F6B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					1037E92C21C96086001C2F6B = {
 						CreatedOnToolsVersion = 10.1;
@@ -324,15 +340,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1037E96421CAD777001C2F6B /* UITextField+Extensions.swift in Sources */,
 				1037E94C21C9F9B0001C2F6B /* SPInputView.swift in Sources */,
 				1037E95521CA1A83001C2F6B /* NibFileLoadable.swift in Sources */,
+				1037E97621CB3AE3001C2F6B /* CoreDataManager.swift in Sources */,
 				1037E95321CA048F001C2F6B /* ContactViewmodel.swift in Sources */,
 				1037E91C21C96084001C2F6B /* ContactViewController.swift in Sources */,
+				1037E98121CB3CD7001C2F6B /* ContactInfo.swift in Sources */,
 				1037E96221CA7D72001C2F6B /* AkiraTextField.swift in Sources */,
 				1037E91A21C96084001C2F6B /* AppDelegate.swift in Sources */,
-				1037E92221C96084001C2F6B /* ContactForm.xcdatamodeld in Sources */,
+				1037E96621CAD780001C2F6B /* Validators.swift in Sources */,
+				1037E96921CAFEC9001C2F6B /* ContactForm.xcdatamodeld in Sources */,
 				1037E95A21CA1EAC001C2F6B /* UIView+Extensions.swift in Sources */,
 				1037E94F21CA0446001C2F6B /* ItemStackable.swift in Sources */,
+				1037E98221CB3CD7001C2F6B /* _ContactInfo.swift in Sources */,
 				1037E96121CA7D72001C2F6B /* TextFieldEffects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ContactForm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -516,6 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sp.codetest.ContactForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -525,6 +548,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ContactForm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -658,12 +682,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1037E92021C96084001C2F6B /* ContactForm.xcdatamodeld */ = {
+		1037E96721CAFEC8001C2F6B /* ContactForm.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1037E92121C96084001C2F6B /* ContactForm.xcdatamodel */,
+				1037E96821CAFEC8001C2F6B /* ContactForm.xcdatamodel */,
 			);
-			currentVersion = 1037E92121C96084001C2F6B /* ContactForm.xcdatamodel */;
+			currentVersion = 1037E96821CAFEC8001C2F6B /* ContactForm.xcdatamodel */;
 			path = ContactForm.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -8,19 +8,35 @@
 
 import UIKit
 
+extension String {
+    
+}
+
+enum PlaceholderString: String, CaseIterable {
+    case firstName = "FirstName"
+    case lastName = "LastName"
+    case dob = "DOB"
+}
+
 final class ContactViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var scrollView: UIScrollView!
     
     private var contactViewModel: ContactViewModel!
+    private var contactDataProvider: ContactDataProvider?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         scrollView.contentInsetAdjustmentBehavior = .never
         contactViewModel = ContactViewModel()
+        contactDataProvider = ContactDataProvider()
         configureStackView()
+    }
+    @IBAction func saveClicked(_ sender: Any) {
+        //Validate all textFields and save contact info into coredata.
+        
     }
 }
 
@@ -31,11 +47,11 @@ extension ContactViewController {
         contactViewModel.stackableItems.forEach {
             switch $0 {
             case .firstName:
-                addTextField(placeHolder: "FirstName")
+                addTextField(placeHolder: PlaceholderString.firstName.rawValue)
             case .lastName:
-                addTextField(placeHolder: "LastName")
+                addTextField(placeHolder: PlaceholderString.lastName.rawValue)
             case .dob:
-                addTextField(placeHolder: "dob")
+                addTextField(placeHolder: PlaceholderString.dob.rawValue)
             }
         }
     }
@@ -44,9 +60,64 @@ extension ContactViewController {
         
         let inputView = SPInputView.loadFromNib()
         inputView.textField.placeholder = placeHolder
+        inputView.textField.delegate = self
         stackView.addArrangedSubview(UIView.createView(withSubview: inputView, edgeInsets: .standard))
     }
+    
+    private func inputViewFor(placeholder: String?) -> SPInputView? {
+        guard let placeHolder = placeholder else {
+            return nil
+        }
+        return stackView.arrangedSubviews.compactMap {
+            guard let inputView: SPInputView = $0.subviews.first as? SPInputView, inputView.textField.placeholder == placeholder else {
+                return nil
+            }
+            return inputView
+        }.first
+    }
+    
+    private func resetStackView() {
+        
+    }
+}
 
+// MARK: -  UITextFieldDelegate
+extension ContactViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        guard let inputView = inputViewFor(placeholder: textField.placeholder) else {
+            return true
+        }
+        inputView.showError = false
+        return true
+    }
+        
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        guard let inputView = inputViewFor(placeholder: textField.placeholder) else {
+            return
+        }
+        do {
+            if textField.placeholder == PlaceholderString.firstName.rawValue {
+                contactDataProvider?.firstName = try inputView.textField.validatedText(validationType: .firstname)
+            }
+            if textField.placeholder == PlaceholderString.lastName.rawValue {
+                contactDataProvider?.lastName = try inputView.textField.validatedText(validationType: .lastname)
+            }
+            if textField.placeholder == PlaceholderString.dob.rawValue {
+                contactDataProvider?.dob = try inputView.textField.validatedText(validationType: .username)
+            }
+            
+        } catch(let error) {
+            if let error: ValidationError = error as? ValidationError {
+                inputView.showError(localizedMessage: error.message)
+            }
+        }
+    }
 }
 
 // MARK: - UIEdgeInsets

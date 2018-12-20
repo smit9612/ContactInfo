@@ -72,7 +72,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qSS-gV-zOD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Contact" id="eCm-Z7-KPg"/>
+                    <navigationItem key="navigationItem" title="Contact" id="eCm-Z7-KPg">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="d96-s6-nf9">
+                            <connections>
+                                <action selector="saveClicked:" destination="VrW-7l-jh5" id="qk1-kI-bCg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="scrollView" destination="rTi-eV-pD7" id="Nzl-36-L0N"/>
                         <outlet property="stackView" destination="Isj-VL-tRU" id="QgZ-F9-Wdx"/>

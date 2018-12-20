@@ -13,6 +13,7 @@ final class SPInputView: UIView {
     @IBOutlet weak var textField: AkiraTextField!
     
     @IBOutlet weak var errorLabel: UILabel!
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -32,4 +33,8 @@ final class SPInputView: UIView {
         showError = false
     }
     
+    func showError(localizedMessage: String) {
+        showError = true
+        errorLabel.text = localizedMessage
+    }
 }
