@@ -23,6 +23,7 @@ struct ContactViewModel: ItemStackable {
         case firstName
         case lastName
         case dob
+        
     }
     
     var stackableItems: [StackableItem]! {

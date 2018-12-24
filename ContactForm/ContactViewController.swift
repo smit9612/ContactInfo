@@ -33,7 +33,7 @@ final class ContactViewController: UIViewController {
         contactViewModel = ContactViewModel()
         contactDataProvider = ContactDataProvider()
         let contactInfos = contactViewModel.contactInfos
-        
+        // TODO load contactInfos 
         configureStackView()
     }
     @IBAction func saveClicked(_ sender: Any) {
@@ -67,7 +67,7 @@ extension ContactViewController {
     }
     
     private func inputViewFor(placeholder: String?) -> SPInputView? {
-        guard let placeHolder = placeholder else {
+        guard let _ = placeholder else {
             return nil
         }
         return stackView.arrangedSubviews.compactMap {

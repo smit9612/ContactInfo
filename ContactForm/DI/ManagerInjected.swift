@@ -18,5 +18,5 @@ extension ManagerInjected {
 }
 
 struct ManagerInjector {
-    static var coreDataManager: CoreDataManagerProtocol = CoreDataManager() as! CoreDataManagerProtocol
+    static var coreDataManager: CoreDataManagerProtocol = CoreDataManager()
 }
